@@ -1,0 +1,38 @@
+<view class="circle">
+  <view class="page__hd">
+    <image class="weui-media-box__thumb" src="https://ehome.susmote.com/zb_users/upload/2018/06/20180601180031152784723134837.png" />
+    <view class="page__title">个人信息</view>
+    <view class="page__desc">学号登陆后，进行个人信息展示</view>
+  </view>
+</view>
+<view class="weui-panel__hd" style='font-size:30rpx'>个人信息</view>
+<view class="weui-panel__bd">
+  <view class="weui-media-box weui-media-box_small-appmsg">
+    <view class="weui-cells weui-cells_in-small-appmsg">
+      <view class="weui-cell weui-cell_access">
+        <view class="weui-cell__bd weui-cell_primary">
+          <view class='user_info'>姓名:{{name}}</view>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_access">
+        <view class="weui-cell__bd weui-cell_primary">
+          <view class='user_info'>学号:{{stu_id}}</view>
+        </view>
+
+      </view>
+      <view class="weui-cell weui-cell_access">
+        <view class="weui-cell__bd weui-cell_primary">
+          <view class='card-item-font'></view>
+          <view class='user_info'>班级:{{department}}</view>
+        </view>
+
+      </view>
+      <view class="weui-cell weui-cell_access">
+        <view class="weui-cell__bd weui-cell_primary">
+          <view class='card-item-font'></view>
+          <view class='user_info'>专业:{{major}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

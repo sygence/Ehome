@@ -1,0 +1,10 @@
+/**app.wxss**/
+@import "./weui/weui.wxss";
+@import "./zanui/zanui.wxss";
+@import "./global.wxss";
+page {
+    background: #f3f3f3;
+    font-size: 28rpx;
+    line-height: 1.6;
+}
+

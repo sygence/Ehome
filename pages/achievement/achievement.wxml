@@ -1,0 +1,49 @@
+
+
+<view class="table">
+    <!-- <view class='card'>
+    <view class='{{tableStyle}} changeBtn'>
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{grade_years}}">
+        <button data-hi='选择学期' class="weui-btn" type="primary" plain="true">{{currentSemester}}</button>
+      </picker>
+    </view>
+  </view>
+  <view class="canvasStyle {{flag_choose}}">
+    <canvas style="width: 120%; height: 200px;" canvas-id="score"></canvas>
+  </view>   -->
+  
+    <view class="tr bg-w">
+        <view class="th">{{year}}年第{{term}}学期</view>
+        <!-- <view class="th">绩点</view> -->
+      </view>
+
+  
+
+  <view class='card'>
+    <view class="table">
+      <view class="tr bg-w">
+        <view class="th">科目</view>
+        <view class="th">类型</view>
+        <view class="th ">学分</view>
+        <view class='th'>分数</view>
+      </view>
+      <block wx:for="{{stu_grade}}" wx:key="{{code}}">
+        <view class="tr bg-g" wx:if="{{index%2==0}}" >
+          
+          <view class="td">{{item.name}}</view>
+          <view class="td">{{item.type}}</view>
+          <view class="td">{{item.credit}}</view>
+          <view class="td" wx:if="{{item.grade<60||item.grade=='不通过'||item.grade=='不及格'}}" style='color:red'>{{item.grade}}</view>
+          <view class="td" wx:else="{{item.grade>60}}">{{item.grade}}</view>
+        </view>
+         <view class="tr" wx:else >
+          <view class="td">{{item.name}}</view>
+          <view class="td">{{item.type}}</view>
+          <view class="td">{{item.credit}}</view>
+          <view class="td" wx:if="{{item.grade<60||item.grade=='不通过'||item.grade=='不及格'}}" style='color:red'>{{item.grade}}</view>
+          <view class="td" wx:else="{{item.grade>60}}">{{item.grade}}</view>
+        </view>   
+      </block>
+    </view>
+  </view>
+</view>

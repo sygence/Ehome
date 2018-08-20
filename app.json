@@ -1,0 +1,67 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/start/start",
+    
+    "pages/kebiao/GetLsn",
+           
+    "pages/user/index",
+    
+    "pages/user/bind",
+    "pages/add_forum_article/add_forum_article",
+    "pages/user/about",
+    "pages/kebiao/AddLsn",
+    
+    "pages/kebiao/kebiao",
+    "pages/index/index",
+    "pages/detail/detail",
+    
+    "pages/communication/communication",
+    "pages/information/information",
+    "pages/authorize/authorize",
+    "pages/repair/repair",
+    "pages/user/login",
+    "pages/article/index",
+    "pages/more/more",
+    "pages/web/web",
+    "pages/achievement/achievement",
+    "pages/page/index",
+    "pages/feedback/feedback",
+    "pages/faceset/faceset",
+    "pages/faceset-search/faceset-search",
+    "pages/faceset-add/faceset-add",
+    
+    "pages/form/form",
+    "pages/search/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#43B0D1",
+    "navigationBarTitleText": "宿舍E家服务平台",
+    "navigationBarTextStyle": "write"
+  },
+  "tabBar": {
+    "color": "#121f2f",
+    "selectedColor": "#3a6ea5",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "iconPath": "images/icon/home1.png",
+        "selectedIconPath": "images/icon/home-fill1.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "iconPath": "images/icon/user.png",
+        "selectedIconPath": "images/icon/user-fill.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout":{
+    "request":15000
+  }
+
+}

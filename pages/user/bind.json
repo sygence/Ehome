@@ -1,0 +1,10 @@
+
+{
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#20222f",
+  "navigationBarTitleText": "学号登录",
+  "networkTimeout": {
+    "request": 10000
+    
+  }
+}

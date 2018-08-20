@@ -1,0 +1,62 @@
+<!-- facesetadd template -->
+
+
+
+
+<!-- facesetsearch template -->
+<template name="facesetsearch">
+  <view class="scanner" bindtap="bindChooseImg">
+    <canvas class="canvas" id="scannerCanvas" canvas-id="scannerCanvas" disable-scroll="true" />
+    <view class="chooseImage">
+      <view class="image-plus image-plus-nb">
+        <view class="image-plus-horizontal"></view>
+        <view class="image-plus-vertical"></view>
+      </view>
+      <!-- <view>点击拍摄</view> -->
+    </view>
+  </view>
+  <view class="weui-panel" style="margin-bottom:12px; margin-left: 14rpx;margin-right: 14rpx; border-radius: 15rpx;">
+            <view class="weui-panel__hd" style='font-size:30rpx'>定位前请把GPS打开</view>
+            <view class="weui-panel__bd">
+                <view class="weui-media-box weui-media-box_small-appmsg">
+                    <view class="weui-cells weui-cells_in-small-appmsg">
+                        <view  class="weui-cell weui-cell_access">
+                             <view class="weui-cell__bd weui-cell_primary" > 
+                                <view class='card-item-font'>经度</view>
+                                <view class='user_info'>{{latitude}}</view>
+                            </view>
+                            
+                        </view>
+                        <view class="weui-cell weui-cell_access" >
+                            
+                            <view class="weui-cell__bd weui-cell_primary">
+                                <view class='card-item-font'>纬度</view>
+                                <view class='user_info'>{{longitude}}</view>
+                            </view>
+                            
+                        </view>
+                         <view  class="weui-cell weui-cell_access" >
+                            
+                            <view class="weui-cell__bd weui-cell_primary">
+                                <view class='card-item-font'>地址</view>
+                                <view class='user_info'>{{address}}</view> 
+                            </view>
+                           
+                        </view>
+                        
+                    </view>
+                </view>
+            </view>
+        </view>
+  
+  <view class='btn'>
+    <button bindtap="loadInfo" size='mini' type='primary'>
+      <view>定位</view>
+    </button>
+  </view>
+  <view class="btn">
+    <button bindtap="bindConfirm" size='mini' formType="submit" type='primary'>
+      <view>提交</view>
+    </button>
+  </view>
+</template>

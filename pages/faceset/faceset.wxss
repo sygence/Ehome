@@ -1,0 +1,19 @@
+@import '../form/form.wxss';
+.circle {
+  height: 250rpx;
+  width:auto;
+  background-color:#43b0d1;
+  border-radius:0 0 20% 20%;
+  text-align:center;
+
+}
+.weui-media-box__thumb {
+  height:64px;
+  width: 64px;
+}
+.page__title{
+  color: #fff;
+}
+.page__desc{
+  color: #fff;
+}

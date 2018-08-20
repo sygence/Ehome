@@ -1,0 +1,14 @@
+<view class='logo'>
+<image class="picture"  src="https://ehome.susmote.com/zb_users/upload/2018/06/20180623093743152971786376633.png" style="padding-top:10rpx;"></image>
+</view>
+ <view class='edition'>「爱舍E家」v1.0.0</view>
+ <view class='top'>「爱舍E家」小程序是由susmote、sygence共同开发，专注为武软学子提供便利，提供一个校园服务平台</view>
+  <view class='text_title'>提示：</view>
+  <view class='text'>曾经是梦想闯天涯，但是bug太多，就没去。如果在使用过程中发现bug请及时对我们进行反馈。</view>
+  <view class='text_title'>数据源：</view>
+  <view class='text'>通过爬虫抓取教务网数据，遵循Robots协议，承诺保护用户隐私。</view>
+  <view class='text_title'>公众号：</view>
+  <image class='public' src='https://ehome.susmote.com/zb_users/upload/2018/06/20180623093755152971787519951.png'></image>
+  <view class='public_text'>宿舍E家</view>
+  <view class='text_title'>招募：</view>
+  <view class='text'>如果你对编程感兴趣，并且有一定的基础，欢迎随时加入。QQ群684897672。TexTecBlog欢迎你的到来。</view>
