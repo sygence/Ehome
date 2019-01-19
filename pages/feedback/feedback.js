@@ -26,7 +26,7 @@ Page({
     var index = e.detail.value;
     console.log('form发生了submit事件，携带数据为：', e.detail.value)
     wx.request({
-      url: 'https://ehome.susmote.com/zb_system/cmd.php?act=os_wxapi&v=v1&mode=feedback',
+      url: 'https://eh.susmote.com/zb_system/cmd.php?act=os_wxapi&v=v1&mode=feedback',
       data: {
         content: formData['content'],
         contact: formData['contact'],

@@ -1,0 +1,9 @@
+page{
+
+ 
+ background: url('https://eh.susmote.com/zb_users/upload/2018/09/20180919222350153736703064312.jpg');
+ 
+  background-position:center;
+  background-size:cover;
+ 
+}

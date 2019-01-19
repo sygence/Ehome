@@ -39,34 +39,6 @@ Page({
         })
 
      
-          
-          // wx.request({
-          //   url: getApp().globalData.get_url + 'cmd.php?act=os_wxapi&v=v1&mode=getgrade',
-          //   data: {
-          //     stu_id: wx.getStorageSync("information")['result']['stu_info'].id,
-          //     stu_password: '5211314'
-          //   },
-          //   method: 'GET',
-          //   header: {
-          //     'content-type': 'application/x-www-form-urlencoded' // 默认值
-          //   },
-          //   success: function (res) {
-              
-
-          //     that.setData({
-          //       stu_grade: res.data.result.stu_grade,
-          //       index: res.data.result.stu_grade.length
-          //     })
-          //     console.log(that.data.stu_grade)
-          //     wx.setStorageSync('result', res['data'])
-
-          //   },
-          //   false: function (res) {
-          //     console.log('request fail', res)
-
-          //   }
-          // })
-
 
       }
 

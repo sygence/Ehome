@@ -34,7 +34,7 @@ Page({
     if (wx.getStorageSync("information")){
     var that = this;
     wx.request({
-      url: 'https://ehome.susmote.com/zb_system/cmd.php?act=os_wxapi&v=v1&mode=repair',
+      url: 'https://eh.susmote.com/zb_system/cmd.php?act=os_wxapi&v=v1&mode=repair',
       data: {
         dormitory: this.data.dormitory,
         room: this.data.room,

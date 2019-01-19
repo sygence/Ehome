@@ -10,8 +10,8 @@ Page({
       listData: '',
       tabs: ["周一", "周二", "周三", "周四", "周五", "周六", "周日"],
       activeIndex: 0,
-      classes:'',
-      monday:''
+      timeTable:''
+    
       
   },
   tabClick: function (e) {
@@ -19,8 +19,10 @@ Page({
       sliderOffset: e.currentTarget.offsetLeft,
       activeIndex: e.currentTarget.id
     });
-   
+ 
+    
   },//切换
+
   getToday: function (todayClassName) {
     api.getToday({
       query: {
@@ -40,6 +42,26 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    if (wx.getStorageSync('information') == "" || wx.getStorageSync('information')==" "){
+
+      wx.showModal({
+        title: '提示',
+        content: '请先使用教务系统登录账户',
+        success: function (res) {
+          if (res.confirm) {
+            console.log('用户点击确定')
+            wx.navigateTo({
+              url: '/pages/user/bind',
+            })
+          } else if (res.cancel) {
+            console.log('用户点击取消')
+          }
+        }
+      })
+
+
+
+    }
     this.getToday('today')
     console.log(wx.getStorageSync('information'))
     var data = wx.getStorageSync('information')
@@ -49,81 +71,76 @@ Page({
     //   classes: classes
 
     // })
-    
-    var kebiao=new Array;
-    var name = [[], [], [], [], [] ];
-    var teacher = [[], [], [], [], [],];
-    var timeInTheTerm = [[], [], [], [], [],];
-    var location = [[], [], [], [], [],];
-    var temp = [];
-    var monday = [[], [], [], []];
-    var timeInTheDay = new Array(7)
-    for (var i = 0; i < classes.length;i++)
+   
+    var timeTable=[];
+    var mon = [];
+    var tues = [];
+    var wed=[];
+    var thur=[];
+    var fri=[];
+    var satur=[];
+    var sund=[];
+    for (var i=0;i<classes.length;i++)//遍历
     {
       
-      // if (classes[i].timeInTheWeek == '周一')
-      // {
-      //   console.log(classes[i].name)
+      if (classes[i].timeInTheWeek=='周一'){
         
-      //   console.log(classes[i].timeInTheDay)
-      //   console.log(classes[i].timeInTheTerm)
-      //   console.log(classes[i].location)
-        
-      // }
-      if (classes[i].timeInTheWeek =="周一"){
-        if (classes[i].timeInTheDay == "第1,2节")
-        {
-          name[0].unshift(classes[i].name)
-          teacher[0].unshift(classes[i].teacher)
-        }
-       
-        if (classes[i].timeInTheDay == "第3,4节") {
-          name[1].unshift(classes[i].name)
-          teacher[1].unshift(classes[i].teacher)
-        }
-        
-        if (classes[i].timeInTheDay == "第5,6节") {
-          name[2].unshift(classes[i].name)
-          teacher[2].unshift(classes[i].teacher)
-        }
-        if (classes[i].timeInTheDay== "第7,8节") {
-          name[3].unshift(classes[i].name)
-          teacher[3].unshift(classes[i].teacher)
-        }
-        if (classes[i].timeInTheDay == "第9,10节") {
-          name[4].unshift(classes[i].name)
-          teacher[4].unshift(classes[i].teacher)
-        }
-        
-
+        mon.push(classes[i])
+    
       }
       
-      // if (classes[i].timeInTheWeek == '周二') {
-      //   console.log('周二',classes[i].name)
-      //   console.log('周二',classes[i].timeInTheDay)
-      //   console.log('周二',classes[i].timeInTheTerm)
-      //   console.log('周二',classes[i].location)
+      if (classes[i].timeInTheWeek == '周二') {
+        
+        tues.push(classes[i])
 
-      // }
+      }
+      if (classes[i].timeInTheWeek == '周三') {
+
+        wed.push(classes[i])
+
+      }
+      if (classes[i].timeInTheWeek == '周四') {
+
+        thur.push(classes[i])
+
+      }
+      if (classes[i].timeInTheWeek == '周五') {
+
+        fri.push(classes[i])
+
+      }
+      if (classes[i].timeInTheWeek == '周六') {
+
+        satur.push(classes[i])
+
+      }
+      if (classes[i].timeInTheWeek == '周日') {
+
+        sund.push(classes[i])
+
+      }
      
-    }
-    monday[0].unshift(name);
-    monday[1].unshift(teacher);
-    console.log(name)
-    console.log(teacher)
-    this.setData({
-      monday: monday
 
-    })
-    console.log(monday)
-    console.log(monday[0][0])
-
-
-  
+    };
+    
+    timeTable.push(mon);
+    timeTable.push(tues);
+    timeTable.push(wed);
+    timeTable.push(thur);
+    timeTable.push(fri);
+    timeTable.push(satur);
+    timeTable.push(sund);
     
    
-    // console.log(name)
-    // console.log(timeInTheDay)
+  
+    console.log(timeTable);
+    this.setData({
+      timeTable:timeTable
+
+    })
+    
+   
+
   },
 
   /**

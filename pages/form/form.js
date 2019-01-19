@@ -48,7 +48,7 @@ Page({
         name: '信息学院'
       },
     ],
-    arrayMajor: ["软件技术", "计算机网络技术", "计算机信息管理", "信息安全与管理", "物联网应技术", "数字媒体应用技术", ],
+    arrayMajor: ["软件技术", "计算机网络技术", "计算机信息管理", "信息安全与管理", "物联网应技术", "数字媒体应用技术", "计算机应用技术","大数据","云计算" ],
     Major: [
       {
         id: 0,
@@ -73,6 +73,18 @@ Page({
       {
         id: 5,
         name: '数字媒体应用技术'
+      },
+      {
+        id: 6,
+        name: '计算机应用技术'
+      },
+      {
+        id: 7,
+        name: '大数据'
+      },
+      {
+        id: 8,
+        name: '云计算'
       },
       
     ],
@@ -116,7 +128,7 @@ Page({
 
     console.log('form发生了submit事件，携带数据为：', e.detail.value)
     wx.request({
-      url: 'https://ehome.susmote.com/zb_system/cmd.php?act=os_wxapi&v=v1&mode=reg',
+      url: 'https://eh.susmote.com/zb_system/cmd.php?act=os_wxapi&v=v1&mode=reg',
       data: {
         "sessionid": wx.getStorageSync('sessionid') || "",
         openid: wx.getStorageSync('openid'),
@@ -138,7 +150,7 @@ Page({
         console.log(wx.getStorageSync('openid'))
         console.log(res.data.code)
         // wx.request({
-        //   url: 'https://ehome.susmote.com/forum//wmapi/register.php',
+        //   url: 'https://eh.susmote.com/forum//wmapi/register.php',
         //   method: "POST",
         //   header: { "content-type": "application/x-www-form-urlencoded" },
         //   data: {

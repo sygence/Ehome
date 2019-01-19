@@ -233,24 +233,23 @@ Page({
              })()
          })
      },
+  
      clickForum() {
-      //  wx.showModal({
-      //    title: '温馨提示',
-      //    content: '此功能暂未上线',
-
-      //  })
-
-       wx.navigateToMiniProgram({
-         appId: 'wx8abaf00ee8c3202e',
-         // 目标为吐个槽社区小程序AppID(固定)
-         extraData: {
-           id: '32604',  // 来源为吐个槽上申请的产品ID 
-           customData: {
-             clientInfo: ' iPhone OS 10.3.1 / 3.2.0.43 / 0 ',
-             imei: ' 7280BECE2FC29544172A2B858E9E90D0 '
-           }
-         }
+       wx.navigateTo({
+         url: '/pages/introduce/introduce',
        })
+
+      //  wx.navigateToMiniProgram({
+      //    appId: 'wx8abaf00ee8c3202e',
+      //    // 目标为吐个槽社区小程序AppID(固定)
+      //    extraData: {
+      //      id: '32604',  // 来源为吐个槽上申请的产品ID 
+      //      customData: {
+      //        clientInfo: ' iPhone OS 10.3.1 / 3.2.0.43 / 0 ',
+      //        imei: ' 7280BECE2FC29544172A2B858E9E90D0 '
+      //      }
+      //    }
+      //  })
 
     },
    

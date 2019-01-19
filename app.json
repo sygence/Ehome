@@ -1,21 +1,14 @@
 {
-  "pages": [
+  "pages" : [
     "pages/home/index",
     "pages/start/start",
-    
+    "pages/introduce/introduce",
     "pages/kebiao/GetLsn",
-           
     "pages/user/index",
-    
     "pages/user/bind",
-    "pages/add_forum_article/add_forum_article",
     "pages/user/about",
     "pages/kebiao/AddLsn",
-    
     "pages/kebiao/kebiao",
-    "pages/index/index",
-    "pages/detail/detail",
-    
     "pages/communication/communication",
     "pages/information/information",
     "pages/authorize/authorize",
@@ -30,7 +23,6 @@
     "pages/faceset/faceset",
     "pages/faceset-search/faceset-search",
     "pages/faceset-add/faceset-add",
-    
     "pages/form/form",
     "pages/search/index"
   ],

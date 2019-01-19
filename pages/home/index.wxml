@@ -32,12 +32,12 @@
 <!--功能区 -->
 <view class="function">
   <view class="one">
-    <navigator target="miniProgram" open-type="navigate" app-id="wx8abaf00ee8c3202e" path="" extra-data="{{extraData}}"  version="release" class="guide" hover-class="none"> 
+    <!-- <navigator target="miniProgram" open-type="navigate" app-id="wx8abaf00ee8c3202e" path="" extra-data="{{extraData}}"  version="release" class="guide" hover-class="none">  -->
      <view bindtap='clickForum' class="guide" hover-class="none"> 
     <image src="/images/one_1.png"  class="picture"></image>
-    <text class="text">E家论坛</text>
+    <text class="text">介绍E家</text>
      </view> 
-     </navigator>
+     <!-- </navigator> -->
 
     <navigator url="/pages/form/form" class="guide" hover-class="none">
     <image src="/images/one_2.png"  class="picture"></image>

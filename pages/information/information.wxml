@@ -1,6 +1,6 @@
 <view class="circle">
   <view class="page__hd">
-    <image class="weui-media-box__thumb" src="https://ehome.susmote.com/zb_users/upload/2018/06/20180601180031152784723134837.png" />
+    <image class="weui-media-box__thumb" src="https://eh.susmote.com/zb_users/upload/2018/06/20180601180031152784723134837.png" />
     <view class="page__title">个人信息</view>
     <view class="page__desc">学号登陆后，进行个人信息展示</view>
   </view>

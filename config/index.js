@@ -1,6 +1,6 @@
 exports = module.exports = {
   "name": "宿舍E家博客",
-  "host": "https://ehome.susmote.com/",
+  "host": "https://eh.susmote.com/",
   "system": "zbp",
   "urlrule": "1",
   "facesearchurl": "https://aip.baidubce.com/rest/2.0/face/v3/",

@@ -9,23 +9,24 @@
     </view>
     
     <view class="weui-tab__panel">
-      <view class="weui-tab__content" hidden="{{activeIndex != k}}" wx:for-index="k" wx:for="{{tabs}}" wx:key="k_key">
-        <block wx:for="{{monday[0][0]}}" wx:for-item="i" wx:key="index">
-          <view class="weui-media-box weui-media-box_text">
-            <view class="weui-media-box__title weui-media-box__title_in-text">第{{index+1}}大节</view>
-            <view class="weui-media-box__info">
-              <!-- 课程详细信息 -->
-              <!-- <block wx:for="{{name}}"  wx:key="*this">
-                <block wx:if="{{name!==null}}"> -->
-                  <text class="weui-media-box__bold" >{{i}}\n</text>
-                  <text>{{i}}</text>
-                  <!-- <text wx:else>{{i[index][k]}}\n</text> -->
-                <!-- </block>
-              </block> -->
-            </view>
+   
+        <view wx:for="{{timeTable}}"wx:for-item="i" wx:for-index="m"  wx:key="index" >
+         
+        <view wx:for="{{i}}" wx:for-item="class" wx:key="id"> 
+         <block wx:if='{{class.timeInTheWeek == tabs[activeIndex]}}'>
+            <view class="contain">
+              <text class='tex'>{{class.timeInTheDay}}\n</text>
+              <text class='room'>{{class.location}}</text>
+              <text>{{class.name}}\n</text>
+              
+              <text>{{class.teacher}}\n</text>
+              <text>{{class.timeInTheTerm}}</text>
+              
+              
+              </view>
+          </block>
           </view>
-        </block>
-      </view>
+        </view>
       <view class="button-sp-area">
         <button open-type="share" class="weui-btn" type="default" plain="true">分享查询结果</button>
       </view>

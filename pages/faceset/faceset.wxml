@@ -1,6 +1,6 @@
 <view class="circle">
   <view class="page__hd">
-    <image class="weui-media-box__thumb"  src='https://ehome.susmote.com/zb_users/upload/2018/06/20180601180115152784727546016.png' />
+    <image class="weui-media-box__thumb"  src='https://eh.susmote.com/zb_users/upload/2018/06/20180601180115152784727546016.png' />
       <view class="page__title">面部搜索</view>
       <view class="page__desc">进行面部信息录入及搜索</view>
   </view>

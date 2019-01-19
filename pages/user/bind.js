@@ -24,7 +24,7 @@ Page({
          var that=this
          that.setData({
            isLoading: true,
-           duration: 15000
+           duration: 10000
 
          })
          var objData = e.detail.value;
@@ -42,10 +42,14 @@ Page({
               'content-type': 'application/x-www-form-urlencoded' // 默认值
             },
             success: function (res) {
+              console.log(res)
               var toastr = require('../../utils/toastr-wxapp.js');
-              console.log("学号登录", res.data.result)
+              console.log("学号登录获取课表", res)
               // console.log(res['data'])
-              wx.setStorageSync('information', res['data'])
+              
+                wx.setStorageSync('information', res['data'])
+              
+              
              
               wx.request({
                 url: getApp().globalData.get_url + 'cmd.php?act=os_wxapi&v=v1&mode=getgrade',
@@ -59,27 +63,35 @@ Page({
                 },
                 
                 success: function (res) {
-                 
-                  // wx.setStorageSync('stu_grade', res.data.result.stu_grade)
-                  // console.log('成绩信息储存',res.data.result.stu_grade)
-                  // console.log('整体储存',res.data)
-                
-                  if (res.data.result.error == '' || res.data.result.error == null ){
-                    console.log("成绩获取", res)
-                    wx.setStorageSync('result', res['data'])
-                    that.setData({
-                      isLoading: false
-                    });
+                  
+                  console.log('获取成绩', res)
+                  // if (res.data.result.error == '' || res.data.result.error == null ){
+                  //   console.log("成绩获取", res)
+                  //   wx.setStorageSync('result', res['data'])
+                  //   that.setData({
+                  //     isLoading: false
+                  //   });
                     
-                    
-                    wx.switchTab({
-                      url: '/pages/home/index',
-                    })
-                    
-                    toastr.ok({
-                      title: '登录成功',
-                      duration: 1000,
-                    });
+                    if(res.statusCode==200){
+
+                      
+                     
+
+                      wx.setStorageSync('result', res['data'])
+                      
+                      
+
+
+
+                      wx.switchTab({
+                        url: '/pages/home/index',
+                      })
+
+                      toastr.ok({
+                        title: '登录成功',
+                        duration: 10000,
+                      });
+                  
                     
 
                   }else{

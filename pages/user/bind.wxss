@@ -2,7 +2,7 @@
 page{
 
  
- background: url('https://ehome.susmote.com/zb_users/upload/2018/06/20180620213736152950185614725.jpg');
+ background: url('https://eh.susmote.com/zb_users/upload/2018/06/20180620213736152950185614725.jpg');
  /* background: url('http://106.14.220.63/static/images/day_images/img0.jpg'); */
   background-position:center;
   background-size:cover;

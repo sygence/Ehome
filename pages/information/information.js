@@ -31,7 +31,7 @@ Page({
       }
     })
     // wx.request({
-    //   url: 'https://ehome.susmote.com/zb_system/cmd.php?act=os_wxapi&v=v1&mode=getinfo',
+    //   url: 'https://eh.susmote.com/zb_system/cmd.php?act=os_wxapi&v=v1&mode=getinfo',
     //   data:{
     //     "sessionid": wx.getStorageSync('sessionid') || "",
     //      openid: wx.getStorageSync('openid'),

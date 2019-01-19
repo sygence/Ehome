@@ -1,6 +1,6 @@
 <view class="circle">
   <view class="page__hd">
-    <image class="weui-media-box__thumb"  src='https://ehome.susmote.com/zb_users/upload/2018/06/20180602140353152791943313892.png' />
+    <image class="weui-media-box__thumb"  src='https://eh.susmote.com/zb_users/upload/2018/06/20180602140353152791943313892.png' />
       <view class="page__title">更多功能</view>
       <view class="page__desc">收藏了功能的集合</view>
   </view>
@@ -13,10 +13,10 @@
 
 <view class="function">
   <view class="one">
-    <navigator url="/pages/index/index" class="guide" hover-class="none">
+    <view  bindtap='clickintroduce' class="guide" hover-class="none">
     <image src="/images/one_1.png"  class="picture"></image>
-    <text class="text">E家论坛</text>
-    </navigator>
+    <text class="text">介绍E家</text>
+    </view>
     <navigator url="/pages/form/form" class="guide" hover-class="none">
     <image src="/images/one_2.png"  class="picture"></image>
     <text class="text">信息录入</text>
@@ -57,5 +57,8 @@
     <text class="text">等待开发</text>
     </view>
   </view>
+  
+    
+ 
 </view>
 <!-- 咨询区-->
