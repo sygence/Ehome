@@ -236,9 +236,9 @@ App({
   },
 
   globalData: {
-    base_url: 'https://eh.susmote.com/forum/',
-    svr_url: 'https://eh.susmote.com/forum//wmapi/',
-    get_url:'https://eh.susmote.com/zb_system/',
+    base_url: '***API',
+    svr_url: '***API',
+    get_url:'***API',
     openid:'',
     userInfo: null,
     lite_switch: false,
